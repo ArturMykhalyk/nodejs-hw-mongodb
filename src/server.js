@@ -22,7 +22,7 @@ export const setupServer = () => {
 
   app.get('/', (req, res) => {
     res.json({
-      message: 'Hello world!',
+      message: 'HW Mongo DB!',
     });
   });
 
@@ -32,9 +32,9 @@ export const setupServer = () => {
       data: contacts,
     });
   });
-  app.get('contacts/:contactId', async (reg, res, next) => {
-    const { conntactId } = reg.params;
-    const contact = await getContactsById(conntactId);
+  app.get('/contacts/:contactId', async (req, res, next) => {
+    const { contactId } = req.params;
+    const contact = await getContactsById(contactId);
     if (!contact) {
       res.status(404).json({
         message: 'Contact not found',
