@@ -23,6 +23,11 @@ const contactsSchema = new Schema(
       required: true,
       enum: ['work', 'home', 'personal'],
     },
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'users',
+      required: true, // тепер це обовʼязкове поле
+    },
   },
   {
     timestamps: true,
