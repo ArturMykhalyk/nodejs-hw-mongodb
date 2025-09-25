@@ -26,8 +26,9 @@ const contactsSchema = new Schema(
     userId: {
       type: Schema.Types.ObjectId,
       ref: 'users',
-      required: true, // тепер це обовʼязкове поле
+      required: true,
     },
+    photo: { type: String },
   },
   {
     timestamps: true,
