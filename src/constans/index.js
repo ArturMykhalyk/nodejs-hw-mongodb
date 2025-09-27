@@ -14,6 +14,11 @@ export const SMTP = {
   SMTP_FROM: 'SMTP_FROM',
 };
 
+export const API_BREVO = {
+  API_BREVO_KEY: 'API_BREVO_KEY',
+  API_BREVO_FROM: 'API_BREVO_FROM',
+};
+
 export const TEMPLATES_DIR = path.join(process.cwd(), 'src', 'templates');
 
 export const TEMP_UPLOAD_DIR = path.join(process.cwd(), 'temp');

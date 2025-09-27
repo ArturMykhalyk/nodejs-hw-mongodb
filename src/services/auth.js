@@ -5,9 +5,9 @@ import createHttpError from 'http-errors';
 import jwt from 'jsonwebtoken';
 import { SessionsCollection } from '../db/models/session.js';
 import {
+  API_BREVO,
   FIFTEEN_MINUTES,
   ONE_DAY,
-  SMTP,
   TEMPLATES_DIR,
 } from '../constans/index.js';
 import { getEnvVar } from '../utils/getEnvVar.js';
@@ -126,7 +126,7 @@ export const requestResetToken = async (email) => {
   });
 
   await sendEmail({
-    from: getEnvVar(SMTP.SMTP_FROM),
+    from: getEnvVar(API_BREVO.API_BREVO_FROM),
     to: email,
     subject: 'Reset your password',
     html,
