@@ -1,0 +1,31 @@
+type: object
+properties:
+  name:
+    description: "Contact's name"
+    type: string
+    example: 'Artur Mykhalyk'
+  phoneNumber:
+    description: "Contact's number"
+    type: string
+    example: '+380960000000'
+  email:
+    description: "Contact's email"
+    type: string
+    example: 'qwerty@email.com'
+  isFavourite:
+    description: "Contact's favourite"
+    type: boolean
+    default: false
+    example: false
+  contactType:
+    description: "Contact's type"
+    type: string
+    enum: ['work', 'home', 'personal']
+  userId:
+    description: "Contact's parent id"
+    type: string
+    example: 65e4decdd286b30065d54af9
+  photo:
+    type: string
+    format: binary
+    description: Optional contact photo file
